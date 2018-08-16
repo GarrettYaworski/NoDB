@@ -1,0 +1,86 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: blue;
+  color: white;
+}
+img {
+  height: 50px;
+  width: 50px;
+}
+header {
+  display: flex;
+  height: 15vh;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+nav {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.nav-link {
+  cursor: pointer;
+}
+.logo {
+  height: 50px;
+  margin-left: 50px;
+  display: flex;
+}
+.navButton {
+  border-radius: 50%;
+  margin-right: 50px;
+  padding: 10px;
+}
+.body {
+  padding-top: 70px;
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  margin: 0 auto;
+}
+.bodyLogo {
+  display: flex;
+  align-items: center;
+}
+h1 {
+  font-size: 3.5em;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+.mainP {
+  width: 46%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+.bodyButton {
+  display: flex;
+  border-radius: 50%;
+  padding: 12px;
+  align-items: center;
+  margin: 0 auto;
+}
+.bot {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 200px;
+}
+.botLeft {
+  transform: rotate(270deg);
+}
+.botRight {
+  display: flex;
+  transform: rotate(90deg);
+}
+.botBut {
+  margin: 2px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+}
