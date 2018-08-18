@@ -4,7 +4,7 @@ import "./Card.css";
 const DeleteButton = props => {
   return (
     <button
-      onClick={() => props.handleDelClickFn(props.index)}
+      onClick={() => props.handleDelClickFn(props.index2)}
       className="Button"
     >
       Delete

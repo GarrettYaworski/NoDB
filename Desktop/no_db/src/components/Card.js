@@ -7,14 +7,25 @@ class Card extends Component {
   constructor(props) {
     super(props);
 
-    this.handleDelClick = this.handleDelClick.bind(this);
-    this.handleEdClick = this.handleEdClick.bind(this);
-  }
+    this.state = {
+      newName: ""
+    };
 
-  handleEdClick() {}
+    this.handleNameIn = this.handleNameIn.bind(this);
+    this.handleNameClick = this.handleNameClick.bind(this);
+    this.handleDelClick = this.handleDelClick.bind(this);
+  }
 
   handleDelClick(index) {
     this.props.deleteCard(index);
+  }
+  handleNameIn(e) {
+    let newName = e;
+    this.setState({ newName });
+  }
+  handleNameClick(index) {
+    console.log(index);
+    this.props.editPokeFn(this.state.newName, index);
   }
 
   render() {
@@ -23,10 +34,14 @@ class Card extends Component {
       <div className="Card" key={pokemon.name}>
         {pokemon.name}
         <img className="Card__img" alt="pokemon Image" src={pokemon.imageUrl} />
-        <EditButton handleEdClick={this.handleEdClick} />
+        <EditButton
+          handleNameClick={this.handleNameClick}
+          handleNameFn={this.handleNameIn}
+          index={this.props.index}
+        />
         <DeleteButton
           handleDelClickFn={this.handleDelClick}
-          index={this.props.index}
+          index2={this.props.index}
           cardName={pokemon.name}
         />
       </div>

@@ -16,6 +16,7 @@ class Cards extends Component {
           deleteCard={this.props.deleteCard}
           pokemon={pokemon}
           index={pokemon.id}
+          editPokeFn={this.props.editPokeFn}
         />
       );
     });

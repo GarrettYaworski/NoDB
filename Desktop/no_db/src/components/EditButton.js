@@ -3,9 +3,18 @@ import "./Card.css";
 
 const EditButton = props => {
   return (
-    <button onClick={() => this.props.handleEdClick()} className="Button">
-      Edit
-    </button>
+    <div>
+      <input
+        onChange={e => props.handleNameFn(e.target.value)}
+        placeholder="Enter new Name"
+      />
+      <button
+        onClick={() => props.handleNameClick(props.index)}
+        className="Button"
+      >
+        Voila
+      </button>
+    </div>
   );
 };
 

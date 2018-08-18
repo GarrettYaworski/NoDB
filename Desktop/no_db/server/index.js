@@ -6,7 +6,8 @@ const port = 3001;
 const {
   getPokemon,
   addPokemon,
-  deletePokemon
+  deletePokemon,
+  editPokemon
 } = require("./controller/controller");
 
 const app = express();
@@ -16,5 +17,6 @@ app.use(json());
 app.get("/api/pokemon", getPokemon);
 app.post("/api/pokemon", addPokemon);
 app.delete("/api/deletePokemon/:id", deletePokemon);
+app.put("/api/pokemon", editPokemon);
 
 app.listen(port, () => console.log(`listening at port ${port}`));

@@ -15,6 +15,7 @@ class App extends Component {
     this.deleteCard = this.deleteCard.bind(this);
     this.handleImg = this.handleImg.bind(this);
     this.handleName = this.handleName.bind(this);
+    this.editPoke = this.editPoke.bind(this);
   }
 
   componentDidMount() {
@@ -36,6 +37,13 @@ class App extends Component {
       this.setState({ myPoke: res.data });
     });
   }
+  editPoke(name, id) {
+    let body = { name, id };
+    console.log(body);
+    axios.put(`/api/pokemon`, body).then(res => {
+      this.setState({ myPoke: res.data });
+    });
+  }
 
   handleImg(imgUrl) {
     this.setState({ newImg: imgUrl });
@@ -48,7 +56,12 @@ class App extends Component {
     console.log(this.state.myPoke);
     return (
       <div className="App">
-        <Cards deleteCard={this.deleteCard} myPokeArr={this.state.myPoke} />
+        <Cards
+          deleteCard={this.deleteCard}
+          editPokeFn={this.editPoke}
+          myPokeArr={this.state.myPoke}
+          handleNameFn={this.handleName}
+        />
         <input
           placeholder="image url"
           onChange={e => this.handleImg(e.target.value)}

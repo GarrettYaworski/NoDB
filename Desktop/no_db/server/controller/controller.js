@@ -1,22 +1,8 @@
 const axios = require("axios");
 
 let pokeData = [];
-// let images = [];
-
-// for (let i = 155; i <= 200; i++) {
-//   axios
-//     .get(`https://pokeapi.co/api/v1/sprite/${i}`)
-//     .then(res => {
-//       //   console.log(res.data);
-//       pokeData.push(res.data);
-//     })
-//     .catch(err => console.log(err));
-// }
 
 const getPokemon = async (req, res) => {
-  // if (pokeData[0]) {
-  //   res.status(200).json(pokeData);
-  // }
   let { data } = await axios.get(`https://pokeapi.co/api/v2/pokemon`);
   pokeData = data.results.map((pokemon, index) => {
     return {
@@ -61,8 +47,17 @@ const deletePokemon = (req, res) => {
   res.status(200).json(pokeData);
 };
 
+const editPokemon = (req, res) => {
+  let { name, id } = req.body;
+  console.log(name, id);
+  const pokeIndex = pokeData.findIndex(poke => poke.id === +id);
+  pokeData[pokeIndex].name = name;
+  res.status(200).json(pokeData);
+};
+
 module.exports = {
   getPokemon,
   addPokemon,
-  deletePokemon
+  deletePokemon,
+  editPokemon
 };
