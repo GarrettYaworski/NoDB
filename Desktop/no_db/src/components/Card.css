@@ -1,0 +1,25 @@
+.Card {
+  border: solid black 1px;
+  background: rgb(255, 205, 42);
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+  border-radius: 3%;
+  flex-wrap: wrap;
+  font-weight: bold;
+  /* text-decoration: underline;   may make link*/
+}
+.Button {
+  transition: all 200ms;
+}
+
+.Button:hover {
+  background: black;
+  color: white;
+}
+.Card__img {
+  align-self: center;
+  max-width: 100px;
+  max-height: 100px;
+}
