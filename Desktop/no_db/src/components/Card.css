@@ -1,6 +1,11 @@
 .Card {
   border: solid black 1px;
-  background: rgb(255, 205, 42);
+  background: rgb(113, 180, 255);
+  background: linear-gradient(
+    144deg,
+    rgba(113, 180, 255, 1) 0%,
+    rgba(0, 67, 131, 1) 83%
+  );
   margin: 5px;
   display: flex;
   flex-direction: column;
@@ -10,7 +15,7 @@
   font-weight: bold;
   /* text-decoration: underline;   may make link*/
 }
-.Button {
+button {
   transition: all 200ms;
 }
 
@@ -22,4 +27,7 @@
   align-self: center;
   max-width: 100px;
   max-height: 100px;
+}
+#bat:hover {
+  color: crimson;
 }

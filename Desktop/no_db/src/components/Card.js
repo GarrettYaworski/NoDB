@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import EditButton from "./EditButton";
 import DeleteButton from "./DeleteButton";
+import BattleButton from "./BattleButton";
 import "./Card.css";
 
 class Card extends Component {
@@ -38,6 +39,12 @@ class Card extends Component {
           handleNameClick={this.handleNameClick}
           handleNameFn={this.handleNameIn}
           index={this.props.index}
+        />
+        <BattleButton
+          handleBattleClick={this.props.handleBattleClick}
+          handleDelClickFn={this.handleDelClick}
+          index={this.props.index}
+          cardName={pokemon.name}
         />
         <DeleteButton
           handleDelClickFn={this.handleDelClick}

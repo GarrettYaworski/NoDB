@@ -3,16 +3,16 @@ import "./Card.css";
 
 const EditButton = props => {
   return (
-    <div>
+    <div className="editComps">
       <input
         onChange={e => props.handleNameFn(e.target.value)}
-        placeholder="Enter new Name"
+        placeholder="New Name..."
       />
       <button
         onClick={() => props.handleNameClick(props.index)}
         className="Button"
       >
-        Voila
+        Confirm
       </button>
     </div>
   );

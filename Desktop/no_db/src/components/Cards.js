@@ -17,6 +17,7 @@ class Cards extends Component {
           pokemon={pokemon}
           index={pokemon.id}
           editPokeFn={this.props.editPokeFn}
+          handleBattleClick={this.props.handleBattleClick}
         />
       );
     });
