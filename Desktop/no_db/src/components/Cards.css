@@ -1,7 +1,7 @@
 .Cards {
   display: grid;
   border-radius: 3%;
-  background-color: black;
+  background-color: none;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   justify-content: center;
