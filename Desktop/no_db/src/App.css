@@ -1,28 +1,44 @@
 .App {
   text-align: center;
+  height: 100%;
+}
+.daBut {
+  border: none;
+  color: none;
+  opacity: 1;
+  width: 5%;
+}
+.daBut:hover {
+  border: 1px solid #ffcc03;
+  background: black;
+  color: #ffcc03;
+  cursor: pointer;
+}
+input {
+  margin: 5px;
+  /* border: 1px solid black; */
+  /* background: #ffcc03; */
+  background: none;
+  border: none;
+  color: black;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+body {
+  background-image: url("./components/StatPics/Pokeball.jpeg");
+  background-size: cover;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-
-.App-title {
-  font-size: 1.5em;
+.titleImg {
+  animation: fadeIn 15s;
 }
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.spacer {
+  height: 10px;
 }

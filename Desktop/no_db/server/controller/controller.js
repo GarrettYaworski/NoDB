@@ -49,7 +49,6 @@ const deletePokemon = (req, res) => {
 
 const editPokemon = (req, res) => {
   let { name, id } = req.body;
-  console.log(name, id);
   const pokeIndex = pokeData.findIndex(poke => poke.id === +id);
   pokeData[pokeIndex].name = name;
   res.status(200).json(pokeData);

@@ -1,11 +1,9 @@
 .Cards {
-  /* width: 100%; */
-  /* display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-   */
   display: grid;
+  border-radius: 3%;
+  background-color: black;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  margin: 0px 120px 0px 120px;
 }

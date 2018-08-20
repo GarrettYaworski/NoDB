@@ -1,33 +1,52 @@
 .Card {
   border: solid black 1px;
-  background: rgb(113, 180, 255);
-  background: linear-gradient(
-    144deg,
-    rgba(113, 180, 255, 1) 0%,
-    rgba(0, 67, 131, 1) 83%
-  );
-  margin: 5px;
+  height: 230px;
+  background-image: url("./StatPics/PokeCard2.png");
+  background-size: cover;
+  margin: 1px;
   display: flex;
   flex-direction: column;
   text-transform: capitalize;
   border-radius: 3%;
   flex-wrap: wrap;
   font-weight: bold;
-  /* text-decoration: underline;   may make link*/
+  color: rgb(3, 0, 0);
+}
+.inputBox {
+  width: 85%;
+  background: none;
+  border: none;
+  color: rgb(247, 244, 244);
 }
 button {
+  justify-self: center;
+  width: 100%;
+  background: none;
   transition: all 200ms;
+  border: none;
+  opacity: 0;
 }
 
 .Button:hover {
-  background: black;
-  color: white;
+  opacity: 1;
+  color: black;
+  cursor: pointer;
 }
 .Card__img {
   align-self: center;
   max-width: 100px;
   max-height: 100px;
+  border-radius: 50%;
+  transition: 0.8s ease-in-out;
+}
+.Card__img:hover {
+  transform: rotate(360deg);
 }
 #bat:hover {
   color: crimson;
+}
+.spacer {
+  height: 10px;
+  width: 100%;
+  margin: 0;
 }

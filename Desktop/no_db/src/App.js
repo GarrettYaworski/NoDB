@@ -25,7 +25,6 @@ class App extends Component {
 
   componentDidMount() {
     axios.get("/api/pokemon").then(res => {
-      console.log(res);
       this.setState({ myPoke: res.data });
     });
   }
@@ -44,7 +43,6 @@ class App extends Component {
   }
   editPoke(name, id) {
     let body = { name, id };
-    console.log(body);
     axios.put(`/api/pokemon`, body).then(res => {
       this.setState({ myPoke: res.data });
     });
@@ -118,6 +116,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <br />
+        <img
+          className="titleImg"
+          alt=""
+          src="https://fontmeme.com/permalink/180819/18ba8e26225bd21bd2448746efd58592.png"
+        />
+        <br />
         <Cards
           deleteCard={this.deleteCard}
           editPokeFn={this.editPoke}
@@ -126,20 +131,19 @@ class App extends Component {
           handleBattleClick={this.handleBattleClick}
         />
         <input
-          placeholder="image url"
+          placeholder="Image URL"
           onChange={e => this.handleImg(e.target.value)}
         />
         <input
-          placeholder="Pokemon name"
+          placeholder="Pokémon name"
           onChange={e => this.handleName(e.target.value)}
         />
         <button
-          className="Button"
+          className="daBut"
           onClick={() => this.addPoke(this.state.newName, this.state.newImg)}
         >
           Submit
         </button>
-        <div>{/* <Arena /> */}</div>
       </div>
     );
   }

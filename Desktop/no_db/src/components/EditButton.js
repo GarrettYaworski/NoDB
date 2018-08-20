@@ -5,8 +5,9 @@ const EditButton = props => {
   return (
     <div className="editComps">
       <input
+        placeholder="PokeMove       OVER9000!!"
+        className="inputBox"
         onChange={e => props.handleNameFn(e.target.value)}
-        placeholder="New Name..."
       />
       <button
         onClick={() => props.handleNameClick(props.index)}

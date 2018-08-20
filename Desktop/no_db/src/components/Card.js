@@ -33,12 +33,17 @@ class Card extends Component {
     const { pokemon } = this.props;
     return (
       <div className="Card" key={pokemon.name}>
+        <p className="spacer" />
         {pokemon.name}
-        <img className="Card__img" alt="pokemon Image" src={pokemon.imageUrl} />
+        <div className="imgContain">
+          <img className="Card__img" alt="" src={pokemon.imageUrl} />
+        </div>
+        <br />
         <EditButton
           handleNameClick={this.handleNameClick}
           handleNameFn={this.handleNameIn}
           index={this.props.index}
+          cardName={pokemon.name}
         />
         <BattleButton
           handleBattleClick={this.props.handleBattleClick}
